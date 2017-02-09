@@ -10,4 +10,5 @@ public class MySuperhero {
 		System.out.println("Appeared: Marvel Super-Heroes #8 (January 1992)");
 		System.out.println("Why: I chose this superhero because it is such a ridiculous name for a superhero");
 	}
+
 }
