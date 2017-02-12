@@ -6,8 +6,9 @@ public class Temperatures {
 		 The required methods are below the main method
 		 */
 		
-		
 		boolean notQuit = true;
+		double fahrenheit, celsius,kelvin, rankine;
+		
 		printInstructions();
 		while(notQuit){
 			Scanner input = new Scanner(System.in);
@@ -17,32 +18,54 @@ public class Temperatures {
 			input.nextLine(); // clear input buffer
 			
 			switch(choice){
+			
 				case(1):
-					System.out.print("Fahrenheit to convert to celsius: ");
-					double fahrenheit = input.nextDouble();
-					double celsius = fahrenheit2Celsius(fahrenheit);
+					System.out.print("Fahrenheit to convert to Celsius: ");
+					fahrenheit = input.nextDouble();
+					celsius = fahrenheit2Celsius(fahrenheit);
 					System.out.println("\n" + fahrenheit + "\u00b0 Fahrenheit = " + celsius + "\u00b0 Celsius");
 					break;
 				case(2):
-					
+					System.out.print("Fahrenheit to convert to Kelvin: ");
+					fahrenheit = input.nextDouble();
+					kelvin = fahrenheit2Kelvin(fahrenheit);
+					System.out.println("\n" + fahrenheit + "\u00b0 Fahrenheit = " + kelvin + " Kelvin");
 					break;
 				case(3):
-					
+					System.out.print("Fahrenheit to convert to Rankine: ");
+					fahrenheit = input.nextDouble();
+					rankine = fahrenheit2Rankine(fahrenheit);
+					System.out.println("\n" + fahrenheit + "\u00b0 Fahrenheit = " + rankine + "\u00b0 Rankine");
 					break;
 				case(4):
-					
+					System.out.print("Celsius to convert to Fahrenheit: ");
+					celsius = input.nextDouble();
+					fahrenheit = celsius2Fahrenheit(celsius);
+					System.out.println("\n" + celsius + "\u00b0 Celsius = " + fahrenheit + "\u00b0 Fahrenheit");
 					break;
 				case(5):
-					
+					System.out.print("Celsius to convert to Kelvin: ");
+					celsius = input.nextDouble();
+					kelvin = celsius2Kelvin(celsius);
+					System.out.println("\n" + celsius + "\u00b0 Celsius = " + kelvin + " Kelvin");
 					break;
 				case(6):
-					
+					System.out.print("Celsius to convert to Rankine: ");
+					celsius = input.nextDouble();
+					rankine = celsius2Rankine(celsius);
+					System.out.println("\n" + celsius + "\u00b0 Celsius = " + rankine + "\u00b0 Rankine");
 					break;
 				case(7):
-					
+					System.out.print("Kelvin to convert to Fahrenheit: ");
+					kelvin = input.nextDouble();
+					fahrenheit = kelvin2Fahrenheit(kelvin);
+					System.out.println("\n" + kelvin + " Kelvin = " + fahrenheit + "\u00b0 Fahrenheit");
 					break;
 				case(8):
-					
+					System.out.print("Kelvin to convert to Celsius: ");
+					kelvin = input.nextDouble();
+					celsius = kelvin2Celsius(kelvin);
+					System.out.println("\n" + kelvin + " Kelvin = " + celsius + "\u00b0 Celsius");
 					break;
 				case(0):
 					notQuit = false;
@@ -74,35 +97,42 @@ public class Temperatures {
 	}
 	
 	public static double fahrenheit2Celsius(double fahrenheit){
-		double celsius = 0d;
+		double celsius = (((fahrenheit) - 32) * (5.0/9));
 		return celsius;
 	}
 	
 	public static double fahrenheit2Kelvin(double fahrenheit){
-		return 0.0d;
+		double kelvin = (((fahrenheit) + 459.67) * (5.0/9));
+		return kelvin;
 	}
 	
 	public static double fahrenheit2Rankine(double fahrenheit){
-		return 0.0d;
+		double rankine = ((fahrenheit) + 459.67);
+		return rankine;
 	}
 	
 	public static double celsius2Fahrenheit(double celsius){
-		return 0.0d;
+		double fahrenheit = (((celsius) * (9.0 / 5)) + 32);
+		return fahrenheit;
 	}
 	
 	public static double celsius2Kelvin(double celsius){
-		return 0.0d;
+		double kelvin = ((celsius) + 273.15);
+		return kelvin;
 	}
 	
 	public static double celsius2Rankine(double celsius){
-		return 0.0d;
+		double rankine = (((celsius) + 273.15) * (9.0/5));
+		return rankine;
 	}
 	
 	public static double kelvin2Fahrenheit(double kelvin){
-		return 0.0d;
+		double fahrenheit = (((kelvin) * (9.0/5)) - 459.67);
+		return fahrenheit;
 	}
 	
 	public static double kelvin2Celsius(double kelvin){
-		return 0.0d;
+		double celsius = ((kelvin) - 273.15);
+		return celsius;
 	}
 }
