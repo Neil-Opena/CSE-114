@@ -1,0 +1,11 @@
+
+public class BMR {
+	public static void main(String[] args){
+		boolean recalled;
+		int modelYear = 2005;
+		recalled = ((modelYear<=2006) && (modelYear >= 2001))? true:false;
+		if(recalled){
+			System.out.println("Hi");
+		}
+	}
+}

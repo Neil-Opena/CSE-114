@@ -1,0 +1,12 @@
+
+public class BMR {
+	public static void main(String[] args){
+		boolean norecall;
+		int modelYear = 2005;
+		//recalled = ((modelYear<=2006) && (modelYear >= 2001))? true:false;
+		norecall = ((modelYear<=2006) && (modelYear >= 2001))? true:false;
+		if(norecall){
+			System.out.println("Hi");
+		}
+	}
+}

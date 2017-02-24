@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\neil1\Stony Brook University\OneDrive - Stony Brook University\Freshman Year 2016-17\Spring 2017\CSE 114\workspace\CSE-114\Homework1"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\neil1\Stony Brook University\OneDrive - Stony Brook University\Freshman Year 2016-17\Spring 2017\CSE 114\workspace\CSE-114\Lab06"/>
+			<item value="C:\Users\neil1\Stony Brook University\OneDrive - Stony Brook University\Freshman Year 2016-17\Spring 2017\CSE 114\workspace\CSE-114\Homework2"/>
+			<item value="C:\Users\neil1\Stony Brook University\OneDrive - Stony Brook University\Freshman Year 2016-17\Spring 2017\CSE 114\workspace\CSE-114\Homework1"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

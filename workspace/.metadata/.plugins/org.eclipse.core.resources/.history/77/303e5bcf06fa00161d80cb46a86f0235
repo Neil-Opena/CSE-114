@@ -1,0 +1,24 @@
+import java.util.*;
+public class test {
+	public static void main(String[] args){
+		String first = "John", middle = "F", family = "Kennedy";
+		
+		String test = first.charAt(0) + "." + middle.charAt(0) + "." + family.charAt(0) + ".";
+		System.out.print(family.substring(family.length()-1));
+		
+		Scanner myScanner = new Scanner(System.in);
+		System.out.println("Enter an integer n:");
+		
+		int n = myScanner.nextInt();
+		
+		for(int i = 1; i <= n; i++){
+			for(int j = n-1; j > 0; j--){
+				System.out.print(" " + " ");
+			}
+			
+			for(int k = i; k > 0; k--){
+				System.out.println(k + " ");
+			}
+		}
+	}
+}

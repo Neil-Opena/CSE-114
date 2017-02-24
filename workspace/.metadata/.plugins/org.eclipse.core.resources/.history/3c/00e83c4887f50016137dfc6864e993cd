@@ -1,0 +1,9 @@
+
+public class test {
+	public static void main(String[] args){
+		String first = "John", middle = "F", family = "Kennedy";
+		
+		String test = first.charAt(0) + "." + middle.charAt(0) + "." + family.charAt(0) + ".";
+		System.out.print(test);
+	}
+}
