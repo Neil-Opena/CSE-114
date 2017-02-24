@@ -32,6 +32,9 @@ public class BMR {
 					
 					System.out.println("Basal metabolic rate: " + bmr(weight,height,age,gender));
 					System.out.println("--------------------------------------------");
+					
+					//test
+					System.out.println(bmr(weight,height,age,'F'));
 					break;
 				case (0):
 					notQuit = false;
