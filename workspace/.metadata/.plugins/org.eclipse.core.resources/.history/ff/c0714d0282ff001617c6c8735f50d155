@@ -1,0 +1,20 @@
+
+public class Solution {
+
+    public static void main(String[] args) {
+       char b = 'a';
+       switch (b){
+       case 'a':
+    	   System.out.println(b);
+    	   break;
+       case 'b':
+    	   System.out.println(b);
+       case 'c':
+    	   System.out.println(b);
+    
+       }
+       char a, c;
+       System.out.println(a = b+= c = 5);
+    }
+    
+}

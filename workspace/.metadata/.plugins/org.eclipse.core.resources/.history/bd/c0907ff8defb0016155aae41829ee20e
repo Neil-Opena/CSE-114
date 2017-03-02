@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String s = in.next();
+		if (checkPassword(s)) {
+			System.out.print("VALID");
+
+		} else {
+
+			System.out.print("INVALID");
+		}
+
+	}
+
+	public static boolean checkPassword(String s) {
+		int count = 0;
+		
+		if (s.length() >= 8) {
+			for (int i = 0; i < s.length(); i++) {
+				if ((s.charAt(i) >= 65 && s.charAt(i) <= 90) || (s.charAt(i) >= 97 && s.charAt(i) <= 122)) {
+					// alphabetical character
+				} else if (s.charAt(i) >= 49 && s.charAt(i) <= 57) {
+					// numeric character
+				} else if (s.charAt(i) == '*' || s.charAt(i) == '@' || s.charAt(i) == '$' || s.charAt(i) == '%'
+						|| s.charAt(i) == '&') {
+					
+					count++;
+				} else {
+					return false;
+				}
+			}
+		} else {
+			return false;
+		}
+		
+		if(count >= 1){
+			return true;
+		}
+
+	}
+}

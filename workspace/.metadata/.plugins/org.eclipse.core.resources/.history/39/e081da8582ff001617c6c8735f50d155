@@ -1,0 +1,19 @@
+
+public class Solution {
+
+    public static void main(String[] args) {
+       prin7Nums(25);
+    }
+    
+    public static void prin7Nums(int n){
+    	for(int i = 1; i<=n; i++){
+    		if(i % 7 == 0){
+    			System.out.println(i);
+    		}else{
+    			System.out.print(i + " ");
+    		}
+    	}
+    	
+    }
+    
+}

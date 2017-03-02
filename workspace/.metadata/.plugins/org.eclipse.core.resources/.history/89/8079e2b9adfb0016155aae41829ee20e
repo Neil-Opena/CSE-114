@@ -1,0 +1,32 @@
+/*
+Neil Opena
+110878452
+CSE 114 - Homework #3
+*/
+
+import java.util.*;
+public class BaseToBase {
+
+	public static void main(String[] args){
+		Scanner myScanner = new Scanner(System.in);
+		System.out.print("Enter a number to convert: ");
+		String number = myScanner.nextLine();
+		
+		System.out.print("Enter original base: ");
+		
+		
+		System.out.print("Enter target base: ");
+		
+		
+	}
+	
+	public static String base2base(String n, int b1, int b2){
+		
+		String converted = "";
+		
+		
+		return converted;
+		
+	}
+	
+}

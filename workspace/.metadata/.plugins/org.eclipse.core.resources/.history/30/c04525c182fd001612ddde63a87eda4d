@@ -1,0 +1,44 @@
+import java.util.*;
+public class PrintingDistinctNumbers {
+
+	public static void main(String[] arg){
+		
+		Scanner myScanner = new Scanner(System.in);
+		
+		int[] myArray = new int[10];
+		int counter = 0;
+		
+		for(int i = 0; i < myArray.length; i++){
+			boolean notFound = true;
+			System.out.print("Enter an integer to store: ");
+			int temp = myScanner.nextInt();
+			
+			for(int j = 0; j < myArray.length; j++){
+				if(myArray[j] == temp){
+					notFound = false;
+				}
+				
+			}
+			
+			if(notFound){
+				myArray[i] = temp;
+			}
+		
+		}
+		int[] newArray = new int[counter];
+		
+		for(int i = 0; i < newArray.length; i++){
+			newArray[i] = myArray[i];
+		}
+		
+		printElements(newArray);
+		
+	}
+	
+	public static void printElements(int[] arr){
+		for(int i = 0; i<arr.length;i++){
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
+}
