@@ -9,7 +9,7 @@ import java.util.*;
 public class Length3SubstringMatch {
 
 	public static void main(String[] args){
-		/*
+		
 		Scanner myScanner = new Scanner(System.in);
 		
 		System.out.print("Enter a string s1:");
@@ -19,7 +19,7 @@ public class Length3SubstringMatch {
 		String s2 = myScanner.next();
 		
 		System.out.println("Number of matches returned is: " + stringMatch3(s1,s2));
-		*/
+		
 	}
 	
 	public static int stringMatch3(String a, String b){

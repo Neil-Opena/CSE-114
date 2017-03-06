@@ -10,7 +10,6 @@ import java.util.*;
 public class RunLengthEncoding {
 
 	public static void main(String[] args) {
-		/*
 		Scanner myScanner = new Scanner(System.in);
 		System.out.print("Enter a string to endode:");
 		String message = myScanner.next();
@@ -18,7 +17,7 @@ public class RunLengthEncoding {
 		System.out.print("Enter the delimeter");
 		char delimeter = myScanner.next().charAt(0);
 
-		System.out.print(encode(message, delimeter));*/
+		System.out.print(encode(message, delimeter));
 	}
 
 	public static String encode(String message, char delimeter) {

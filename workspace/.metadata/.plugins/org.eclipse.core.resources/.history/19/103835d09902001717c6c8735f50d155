@@ -8,7 +8,6 @@ import java.util.*;
 public class BaseToBase {
 
 	public static void main(String[] args){
-		/*
 		Scanner myScanner = new Scanner(System.in);
 		System.out.print("Enter a number to convert: ");
 		String number = myScanner.nextLine();
@@ -20,7 +19,7 @@ public class BaseToBase {
 		int targetBase = myScanner.nextInt();
 		
 		System.out.println(base2base(number,originalBase,targetBase));
-		*/
+		
 	}
 	
 	public static String base2base(String n, int b1, int b2){
