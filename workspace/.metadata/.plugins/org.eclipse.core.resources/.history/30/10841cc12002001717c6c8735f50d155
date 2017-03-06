@@ -1,0 +1,49 @@
+
+/*
+Neil Opena
+110878452
+CSE 114 - Homework #3
+*/
+
+import java.util.*;
+
+public class RunLengthEncoding {
+
+	public static void main(String[] args) {
+		Scanner myScanner = new Scanner(System.in);
+		System.out.print("Enter a string to endode:");
+		String message = myScanner.next();
+
+		System.out.print("Enter the delimeter");
+		char delimeter = myScanner.next().charAt(0);
+
+		System.out.print(encode(message, delimeter));
+	}
+
+	public static String encode(String message, char delimeter) {
+		String encoded = "";
+		char[] letters = new char[message.length()];
+		for(int i = 0; i < letters.length; i ++){
+			letters[i] = message.charAt(i);
+		}
+		
+		for(int i = 0; i < letters.length-1; i++){
+			int counter = 0;
+			if(letters[i] == letters[i + 1]){
+				counter++;
+			}
+			
+			if(counter > 3){
+				encoded = encoded + delimeter + letters[i] + counter;
+			}else{
+				for(int j = 0; j <= counter;j++){
+					encoded = encoded + letters[i];
+				}
+			}
+		}
+		
+		return encoded;
+
+	}
+
+}
