@@ -3,10 +3,96 @@ public class Solution {
 
 	public static void main(String[] args) {
 		printSquare(6);
+		System.out.println(changeCase("Stony"));
+		int[] mine = {12,13,31,47,34,19,35};
+		System.out.print(secondLargest(mine));
+	}
+	
+	public static int secondLargest(int[] arr){
+		int largest = 0, secondLargest = 0;
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] > largest)
+				largest = arr[i];
+		}
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] == largest)
+				continue;
+			else if(arr[i] > secondLargest)
+				secondLargest = arr[i];
+		}
+		
+		return secondLargest;
+	}
+	
+	public static void printMatrix(int[][] matrix){
+		for(int i = 0; i < matrix.length; i++){
+			for(int j = 0; j < matrix.length; j++){
+				System.out.print(matrix[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static int[][] flip(int[][] matrix){
+		int[][] ans = new int[matrix.length][matrix.length];
+		for(int i = 0; i < matrix.length; i++){
+			for(int j = 0; j < matrix.length; j++){
+				ans[i][j] = matrix[matrix.length - 1- j][matrix.length - 1- i];
+			}
+		}
+		
+		
+		return ans;
+	}
+	
+	public static void rotateRight(int[] nums, int n){
+		for(int i = 0; i < (nums.length - 1); i++){
+			int temp =  nums[nums.length - 1];
+			for(int j = 0; j < (nums.length - 1); j++){
+				
+			}
+		}
+		
+		
+		
+		
+		
+	}
+	
+	public static String changeCase(String str){
+		String myString = "";
+		for(int i = 0; i < str.length(); i++){
+			if(Character.isLowerCase(str.charAt(i))){
+				myString+=Character.toUpperCase(str.charAt(i));
+			}else if(Character.isUpperCase(str.charAt(i))){
+				myString+=Character.toLowerCase(str.charAt(i));
+			}
+		}
+		
+		return myString;
 	}
 	
 	public static void spaceShip(int n){
-		
+		int rows = n * 2 + 1;
+		for(int i = 0; i < rows; i ++){
+			if(i == n){
+				for(int j = 0; j < rows; j++){
+					System.out.print(">");
+				}
+			}else if(i < n){
+				int temp = i;
+				for(int j = 0; j < i; j++){
+					if(temp == 0){
+						System.out.print("\\");
+					}
+				}
+				
+			}else{
+				
+			}
+			
+			System.out.println();
+		}
 	}
 	
 	public static void printSquare(int n){
