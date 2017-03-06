@@ -20,9 +20,11 @@ public class Collatz {
 	public static int howManyCollatzIterations(int n){
 		int iterations = 0;
 		
+		System.out.print("Sequence: ");
 		
 		int i = n;
 		while(i != 1){
+			System.out.print(i + " ");
 			if(i % 2 == 0){
 				i /= 2;	
 				iterations++;
@@ -31,7 +33,7 @@ public class Collatz {
 				iterations++;
 			}
 			
-		}
+		}System.out.println(i);
 		
 		
 		
