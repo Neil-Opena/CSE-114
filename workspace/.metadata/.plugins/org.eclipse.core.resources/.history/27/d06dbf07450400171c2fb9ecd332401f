@@ -1,0 +1,13 @@
+
+public class MainforFan {
+	public static void main(String[] args){
+		
+		Fan myFan = new Fan();
+		
+		Fan hisFan = new Fan(Fan.MEDIUM,true,7d,"black");
+		
+		System.out.print(myFan.toString());
+		System.out.print(hisFan.toString());
+	}
+	
+}
