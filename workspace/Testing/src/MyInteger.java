@@ -183,7 +183,7 @@ public class MyInteger {
 				System.out.println("obj2.getValue() = " + obj2.getValue());
 
 				System.out.print("Enter a the second of two positive integers to test obj2.equals(int):");
-				int num = stdin.nextInt();
+				int num = Integer.parseInt(stdin.nextLine());
 				System.out.println("obj2.equals(" + num + ") = " + obj2.equals(num));
 			}
 		}
@@ -200,11 +200,44 @@ public class MyInteger {
 				System.out.println("obj2.getValue() = " + obj2.getValue());
 
 				System.out.print(
-						"Enter a the second of two positive integers to test obj2.equals(int):");
-				MyInteger obj3 = new MyInteger(stdin.nextInt());
+						"Enter a the second of two positive integers to create obj3 and test obj2.equals(MyInteger obj3):");
+				MyInteger obj3 = new MyInteger(Integer.parseInt(stdin.nextLine()));
+				System.out.println("MyInteger obj3 = new MyInteger(" + obj3.getValue() + ");");
+				System.out.println("obj3.getValue() = " + obj3.getValue());
 				System.out.println("obj2.equals(obj3) = " + obj2.equals(obj3));
 			}
 		}
+		
+		while(true){
+			String test = stdin.nextLine();
+			System.out.print("Enter a positive integer that will be placed into a char[] array to demonstrate the MyInteger.parseInt(char[]):");
+			if(test.equals("")){
+				break;
+			}else{
+				MyInteger obj4 = new MyInteger(MyInteger.parseInt(test));
+				System.out.println("MyInteger obj4 = new MyInteger(MyInteger.parseInt(char []);");
+				System.out.println("obj4.getValue() = " + obj4.getValue());
+				System.out.println("obj4.isEven() = " + obj4.isEven());
+				System.out.println("obj4.isOdd() = " + obj4.isOdd());
+				System.out.println("obj4.isPrime() = " + obj4.isPrime());
+			}
+		}
+
+		while(stdin.hasNext()){
+			String test = stdin.nextLine();
+			System.out.print("Enter a positive integer that will be placed into a String to demonstrate the MyInteger.parseInt(String):");
+			if(test.equals("")){
+				break;
+			}else{
+				MyInteger obj5 = new MyInteger(MyInteger.parseInt(test));
+				System.out.println("MyInteger obj5 = new MyInteger(MyInteger.parseInt(String);");
+				System.out.println("obj5.getValue() = " + obj5.getValue());
+				System.out.println("obj5.isEven() = " + obj5.isEven());
+				System.out.println("obj5.isOdd() = " + obj5.isOdd());
+				System.out.println("obj5.isPrime() = " + obj5.isPrime());
+			}
+		}
+		
 
 	}
 }
