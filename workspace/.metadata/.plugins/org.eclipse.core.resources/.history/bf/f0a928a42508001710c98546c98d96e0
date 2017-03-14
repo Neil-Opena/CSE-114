@@ -1,0 +1,12 @@
+
+public class ParkingMeter {
+	private int timeLeft = 0;
+	private int maxTime;
+	
+	public ParkingMeter(int maxTime){
+		this.maxTime = maxTime;
+	}
+	
+	
+	
+}

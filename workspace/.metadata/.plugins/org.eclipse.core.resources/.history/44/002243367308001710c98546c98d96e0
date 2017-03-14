@@ -1,0 +1,14 @@
+import java.util.*;
+public class Enter {
+	public static void main(String[] args){
+		Scanner stdin = new Scanner(System.in);
+		boolean isTrue = true;
+		while(isTrue){
+			if(Character.isDigit(stdin.next().charAt(0)))
+				System.out.println("HI");
+			else
+				break;
+				
+		}
+	}
+}

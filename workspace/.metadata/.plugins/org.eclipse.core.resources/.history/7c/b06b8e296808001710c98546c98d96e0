@@ -1,0 +1,147 @@
+import java.util.*;
+
+public class MyInteger {
+
+	private int value;
+
+	public MyInteger(int value) {
+		this.value = value;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public boolean isEven() {
+		if (value % 2 == 0)
+			return true;
+		return false;
+	}
+
+	public boolean isOdd() {
+		if (value % 2 == 1)
+			return true;
+		return false;
+	}
+
+	public boolean isPrime() {
+		boolean a = true;
+		if(value == 2){
+			return true;
+		}else if(value == 1){
+			return false;
+		}
+		for (int i = 2; i <= Math.sqrt(value); i++) {
+			if (value % i == 0)
+				a = false;
+		}
+
+		return a;
+	}
+
+	public static boolean isEven(int num) {
+		if (num % 2 == 0)
+			return true;
+		return false;
+	}
+
+	public static boolean isOdd(int num) {
+		if (num % 2 == 1)
+			return true;
+		return false;
+	}
+
+	public static boolean isPrime(int num) {
+		boolean a = true;
+		if(num == 2){
+			return true;
+		}else if(num == 1){
+			return false;
+		}
+		for (int i = 2; i <= Math.sqrt(num); i++) {
+			if (num % i == 0)
+				a = false;
+		}
+
+		return a;
+	}
+
+	public static boolean isEven(MyInteger num) {
+		if (num.getValue() % 2 == 0)
+			return true;
+		return false;
+	}
+
+	public static boolean isOdd(MyInteger num) {
+		if (num.getValue() % 2 == 1)
+			return true;
+		return false;
+	}
+
+	public static boolean isPrime(MyInteger num) {
+		boolean a = true;
+		if(num.getValue() == 2){
+			return true;
+		}else if(num.getValue() == 1){
+			return false;
+		}
+		for (int i = 2; i <= Math.sqrt(num.getValue()); i++) {
+			if (num.getValue() % i == 0)
+				a = false;
+		}
+
+		return a;
+	}
+
+	public boolean equals(int a) {
+		if (value == a)
+			return true;
+		return false;
+	}
+
+	public boolean equals(MyInteger a) {
+		if (value == a.getValue())
+			return true;
+		return false;
+	}
+
+	public static int parseInt(char[] a) {
+		int val = 0;
+		for (int i = 0, j = a.length - 1; i < a.length; i++, j--) {
+			val += (a[i] - 48) * Math.pow(10, j);
+		}
+
+		return val;
+	}
+
+	public static int parseInt(String a) {
+		int val = 0;
+		for (int i = 0, j = a.length() - 1; i < a.length(); i++, j--) {
+			val += (a.charAt(i) - 48) * Math.pow(10, j);
+		}
+		return val;
+	}
+
+	public static void main(String[] args) {
+		Scanner stdin = new Scanner(System.in);
+		boolean isNum = true;
+		while (isNum) {
+			System.out.print(
+					"Enter a positive integer to create a MyInteger object or <enter> to move on to next part of program:");
+			char test = stdin.next().charAt(0);
+			
+			if(!Character.isWhitespace(test)){
+				isNum = false;
+				break;
+			}
+			MyInteger obj0 = new MyInteger(test - 48);
+			System.out.println("MyInteger obj0 = new MyInteger(" + obj0.getValue() + ");");
+			System.out.println("obj0.getValue() = " + obj0.getValue());
+			System.out.println("obj0.isEven() = " + obj0.isEven());
+			System.out.println("obj0.isOdd() = " + obj0.isOdd());
+			System.out.println("obj0.isPrime() = " + obj0.isPrime());
+		}
+
+		System.out.println("Enter a positive integer to create a MyInteger object");
+	}
+}
