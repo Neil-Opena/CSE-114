@@ -1,0 +1,48 @@
+
+public class MyString1 {
+	
+	private char[] myString;
+	private int length;
+	
+	public MyString1(char[] chars){
+		myString = new char[chars.length];
+		for(int i = 0; i < chars.length; i++){
+			myString[i] = chars[i];
+		}
+		this.length = chars.length;
+	}
+	
+	public char charAt(int index){
+		return myString[index];
+	}
+	
+	public int length(){
+		return this.length;
+	}
+	
+	public MyString1 substring(int begin, int end){
+		char[] temp = new char[end - begin];
+		for(int i = 0, j = begin; i < temp.length; i++, j++){
+			temp[i] = myString[j];
+		}
+		MyString1 sub = new MyString1(temp);
+		return sub;
+		
+	}
+	
+	
+	
+	public static void main(String[] args){
+		char[] a = {'b','e','l','l','h','o','p'};
+		MyString1 hello = new MyString1(a);
+		for(int i = 0; i < hello.length(); i++){
+			System.out.print(hello.charAt(i));
+		}
+		System.out.println();
+		MyString1 hell = hello.substring(0,4);
+		for(int i = 0; i < hell.length(); i++){
+			System.out.print(hell.charAt(i));
+		}
+	}
+	
+}

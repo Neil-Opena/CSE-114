@@ -1,0 +1,23 @@
+
+public class MyString1 {
+	
+	private char[] myString;
+	
+	
+	public MyString1(char[] chars){
+		myString = new char[chars.length];
+		for(int i = 0; i < chars.length; i++){
+			myString[i] = chars[i];
+		}
+	}
+	
+	
+	
+	public static void main(String[] args){
+		char[] a = {'H','E','L','L','O'};
+		MyString1 first = new MyString1(a);
+		
+		System.out.println(first);
+	}
+	
+}
