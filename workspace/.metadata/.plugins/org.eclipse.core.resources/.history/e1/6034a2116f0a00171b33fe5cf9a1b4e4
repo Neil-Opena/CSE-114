@@ -1,0 +1,37 @@
+/*
+ * Neil Opena
+ * 110878452
+ * CSE 114 - Homework #4 Esmaili
+ */
+
+public class Complex {
+	private double a;
+	private double b;
+	
+	public Complex(double a, double b){
+		this.a = a;
+		this.b = b;
+	}
+	
+	public Complex(double a){
+		this(a,0);
+	}
+	
+	public Complex(){
+		this(0);
+	}
+	
+	public double getRealPart(){
+		return a;
+	}
+	
+	public double getImaginaryPart(){
+		return b;
+	}
+	
+	public String toString(){
+		return b!=0?("" + a + " + " + b + "i"):("" + a);
+	}
+	
+	
+}

@@ -1,0 +1,27 @@
+/*
+ * Neil Opena
+ * 110878452
+ * CSE 114 - Homework #4 Esmaili
+ */
+
+public class Complex {
+	private int a;
+	private int b;
+	
+	public Complex(int a, int b){
+		this.a = a;
+		this.b = b;
+	}
+	
+	public Complex(int a){
+		this(a,0);
+	}
+	
+	public Complex(){
+		this(0);
+	}
+	
+	public String toString(){
+		return b!=0?("" + a + " + " + b + "i"):("" + a);
+	}
+}

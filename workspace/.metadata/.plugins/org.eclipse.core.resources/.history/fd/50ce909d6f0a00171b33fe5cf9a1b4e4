@@ -1,0 +1,83 @@
+/*
+ * Neil Opena
+ * 110878452
+ * CSE 114 - Homework #4 Esmaili
+ */
+
+public class Complex {
+	private double a;
+	private double b;
+	
+	public Complex(double a, double b){
+		this.a = a;
+		this.b = b;
+	}
+	
+	public Complex(double a){
+		this(a,0);
+	}
+	
+	public Complex(){
+		this(0);
+	}
+	
+	public double getRealPart(){
+		return a;
+	}
+	
+	public double getImaginaryPart(){
+		return b;
+	}
+	
+	
+	//FIXME finish methods
+	public Complex add(double a, double b){
+		Complex test = new Complex(a,b);
+		Complex total = new Complex(this.a + a, this.b + b);
+		return total;
+	}
+	
+	public Complex add(Complex i){
+		Complex total = new Complex(this.a + i.getRealPart(), this.b + i.getImaginaryPart());
+		return total;
+	}
+	
+	public Complex subtract(double a, double b){
+		Complex test = new Complex(a,b);
+		Complex total = new Complex();
+		return total;
+	}
+	
+	public Complex subtract(Complex i){
+		Complex total = new Complex();
+		return total;
+	}
+	
+	public Complex multiply(double a, double b){
+		Complex test = new Complex(a,b);
+		Complex total = new Complex();
+		return total;
+	}
+	
+	public Complex multiply(Complex i){
+		Complex total = new Complex();
+		return total;
+	}
+	
+	public Complex divide(double a, double b){
+		Complex test = new Complex(a,b);
+		Complex total = new Complex();
+		return total;
+	}
+	
+	public Complex divide(Complex i){
+		Complex total = new Complex();
+		return total;
+	}
+	
+	public String toString(){
+		return b!=0?("" + a + " + " + b + "i"):("" + a);
+	}
+	
+	
+}
