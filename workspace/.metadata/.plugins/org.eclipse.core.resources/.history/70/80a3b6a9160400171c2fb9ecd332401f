@@ -1,8 +1,0 @@
-
-public class MainforFan {
-	public static void main(String[] args){
-		
-		Fan myFan = new Fan();
-	}
-	
-}

@@ -1,0 +1,24 @@
+
+public class Person {
+
+	private String name;
+	private String address;
+	private String phoneNumber;
+	private String emailAddress;
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public Person(String a, String b, String c, int d, String e){
+		name = a;
+		address = b;
+		phoneNumber = c;
+		age = d;
+		emailAddress = e;
+	}
+	
+	public String toString(){
+		return "name: " + name + "address: " + address + "phoneNumber: " + phoneNumber +  "age: " + age + "emailAddress" + emailAddress;
+	}
+}

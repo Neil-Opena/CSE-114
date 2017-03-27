@@ -1,0 +1,10 @@
+
+public class Faculty extends Employee{
+
+	public Faculty(String name, String address, String phone_number, String email_address, int office_number,
+			int salary, MyDate date_hired) {
+		super(name, address, phone_number, email_address, office_number, salary, date_hired);
+		// TODO Auto-generated constructor stub
+	}
+
+}

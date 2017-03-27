@@ -1,0 +1,12 @@
+
+public class Employee extends Person {
+
+	private int office_number;
+	private int salary;
+	private MyDate date_hired;
+	
+	public Employee(String name, String address, String phone_number, String email_address, int office_number, int salary, MyDate date_hired) {
+		super(name, address, phone_number, email_address);
+		
+	}
+}

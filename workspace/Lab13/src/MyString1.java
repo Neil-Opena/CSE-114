@@ -1,4 +1,3 @@
-import org.w3c.dom.CDATASection;
 
 public class MyString1 {
 
@@ -80,7 +79,13 @@ public class MyString1 {
 			}
 		}
 		
-		System.out.println(counter);
+		//System.out.println(counter);
+		MyString1[] temp = new MyString1[1 +  counter];
+		if(temp.length == 1){
+			temp[0] = new MyString1(myString);
+			return temp;
+		}
+		
 		int[] indices = new int[counter];
 		for(int i = 0; i < indices.length; i++){
 			for(int j = 0; j < myString.length; j++){
@@ -97,10 +102,10 @@ public class MyString1 {
 					}
 				}
 			}
-			System.out.print(indices[i] + " ");
+			//System.out.print(indices[i] + " ");
 		}
-		System.out.println();
-		MyString1[] temp = new MyString1[1 +  counter];
+		//System.out.println();
+		
 		//make one  for indices[0];
 		char[] first = new char[indices[0]];
 		for(int i = 0; i < first.length; i++){
@@ -160,20 +165,20 @@ public class MyString1 {
 			System.out.print(b.charAt(i));
 		}
 		System.out.println();
-		char[] c = {'d','o','g','o','d','o','g','o','d','o','g','o','d','o','g'};
+		char[] c = {'d','o','g','.','d','o','g','.','d','o','g','.','d','o','g'};
 		MyString1 d = new MyString1(c);
 		for(int i = 0; i < d.length(); i++){
 			System.out.print(d.charAt(i));
 		}
 		System.out.println();
-		MyString1[] test = d.split("o");
+		MyString1[] test = d.split(".");
 		for(int i = 0; i < test.length; i++){
 			for(int j = 0; j < test[i].length(); j++){
 				System.out.print(test[i].charAt(j));
 			}System.out.print(" ");
 		}
 		
-		//FIXme split only works for singular characters that ARE NOT in the beginning so far..
+		
 		
 	}
 

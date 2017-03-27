@@ -1,0 +1,83 @@
+
+public class Circle2D {
+
+	private double x;
+	private double y;
+	private double radius;
+	
+	public Circle2D(){
+		x = 0;
+		y = 0;
+		radius = 1;
+	}
+	
+	public Circle2D(double x, double y, double radius){
+		this.x = x;
+		this.y = y;
+		this.radius = radius;
+	}
+	
+	public double getX(){
+		return x;
+	}
+	
+	public double getY(){
+		return y;
+	}
+	
+	public double getRadius(){
+		return radius;
+	}
+	
+	public double getArea(){
+		return Math.pow(radius,2) * Math.PI;
+	}
+	
+	public double getPerimeter(){
+		return Math.PI * 2 * radius;
+	}
+	
+	public boolean contains(double x, double y){
+		if(Math.sqrt(Math.pow(x-this.x,2) + Math.pow(y-this.y, 2)) <= radius){
+			return true;
+		}return false;
+	}
+	
+	public boolean contains(Circle2D circle){
+		double radposx = circle.getX() + circle.getRadius();
+		double radnegx = circle.getX() - circle.getRadius();
+		
+		double radposy = circle.getY() + circle.getRadius();
+		double radnegy = circle.getY() - circle.getRadius();
+		
+		if(contains(radposx,circle.getY()) && contains(radnegx,circle.getY()) && 
+		contains(circle.getX(),radposy) && contains(circle.getX(),radnegy))
+			return true;
+		return false;
+	}
+	
+	public boolean overlaps(Circle2D circle){
+		//if distance between the centers are less than sum of  abs(radius)
+		double distance = Math.sqrt(Math.pow(circle.getX() - x, 2) + Math.pow(circle.getY() - y, 2));
+		double totalRad = Math.sqrt(Math.pow(radius, 2) + Math.pow(circle.getRadius(), 2));
+		if(distance <= totalRad)
+			return true;
+		return false;
+	}
+	
+	public static void main(String[] args){
+		Circle2D a = new Circle2D();
+		Circle2D b = new Circle2D(1,1,1);
+		
+		System.out.println("a.getArea() = " + a.getArea());
+		System.out.println("a.getPerimeter() = " + a.getPerimeter());
+		System.out.println("a.contains(0.5,0.5) = " + a.contains(0.5,0.5));
+		System.out.println("a.contains(b) = " + a.contains(b));
+		System.out.println("a.overlaps(b) = " + a.overlaps(b)); 
+	}
+	
+}
+
+
+
+	

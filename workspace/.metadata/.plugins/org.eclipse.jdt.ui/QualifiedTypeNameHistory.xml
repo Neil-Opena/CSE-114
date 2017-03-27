@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="org.w3c.dom.CDATASection"/>
+<fullyQualifiedTypeName name="TestComplex"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 </qualifiedTypeNameHistroy>

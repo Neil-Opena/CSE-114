@@ -1,0 +1,14 @@
+
+public class Person {
+
+}
+
+public class Student extends Person{
+	
+}
+
+public class Driver{
+	public static void main(String[] args){
+		
+	}
+}

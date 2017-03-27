@@ -22,6 +22,6 @@ public class TestMyPoint {
 		
 		MyPoint second = new MyPoint(x2, y2);
 		System.out.println("Distance from (" + first.getX() + "," + first.getY() + ") and MyPoint (" +
-				second.getX() + "," + second.getY() + ") = " + first.distance(x2, y2));
+				second.getX() + "," + second.getY() + ") = " + first.distance(second));
 	}
 }

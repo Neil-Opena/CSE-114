@@ -1,0 +1,9 @@
+
+public class Employee extends Person {
+
+	
+	public Employee(String name, String address, String phone_number, String email_address, String status) {
+		super(name, address, phone_number, email_address);
+		
+	}
+}

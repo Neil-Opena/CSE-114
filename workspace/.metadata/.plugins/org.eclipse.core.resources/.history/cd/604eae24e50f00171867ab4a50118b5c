@@ -1,0 +1,9 @@
+
+public class MyDate {
+
+	private int year;
+	
+	public MyDate(int a){
+		year = a;
+	}
+}

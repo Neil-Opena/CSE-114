@@ -1,0 +1,9 @@
+
+public class Student extends Person{
+
+	private final String status;
+	
+	public Student(String status){
+		this.status = status;
+	}
+}

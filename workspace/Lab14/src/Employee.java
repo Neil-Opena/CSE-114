@@ -1,0 +1,21 @@
+
+public class Employee extends Person{
+	private String office;
+	private double salary;
+	private MyDate dateHired;
+	
+	public Employee(String office, double salary, MyDate dateHired, String name, String address, String phoneNumber, int age, String email){
+		super(name, address, phoneNumber, age, email);
+		this.office = office;
+		this.salary = salary;
+		this.dateHired = dateHired;
+	}
+	
+	public MyDate getDateHired(){
+		return dateHired;
+	}
+	
+	public String toString(){
+		return super.toString() + "office: " + office + "salary: " + salary + "MyDate: " + dateHired;
+	}
+}
